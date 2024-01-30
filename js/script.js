@@ -56,12 +56,6 @@ function getRole(){
     return getCookie(RoleCookieName);
 }
 
-if(isConnected()){
-    alert("Je suis connecté");
-}
-else{
-    alert("Je ne suis pas connnecté");
-}
 
 /*
 disconnected
