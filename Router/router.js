@@ -39,7 +39,7 @@ const LoadContentPage = async () => {
     else{
       const roleUser = getRole();
       if(!allRolesArray.includes(roleUser)){
-        windows.location.replace("/");
+        window.location.replace("/");
       }
     }
   }
@@ -52,7 +52,7 @@ const LoadContentPage = async () => {
   // Ajout du contenu JavaScript
   if (actualRoute.pathJS != "") {
     // Création d'une balise script
-    var scriptTag = document.createElement("script");
+    let scriptTag = document.createElement("script");
     scriptTag.setAttribute("type", "text/javascript");
     scriptTag.setAttribute("src", actualRoute.pathJS);
 
