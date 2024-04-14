@@ -2,6 +2,7 @@
 const tokenCookieName = "accesstoken";
 const RoleCookieName = "role";
 const signoutBtn = document.getElementById("signout-btn");
+const apiUrl = "https://127.0.0.1:8000/api/";
 
 signoutBtn.addEventListener("click", signout);
 
@@ -102,4 +103,34 @@ function sanitizeHtml(text){
     const tempHtml = document.createElement('div');
     tempHtml.textContent = text;
     return tempHtml.innerHTML;
+} 
+
+function getInfosUser(){
+    console.log("Récupération des informations de l'utilisateur...");
+
+    let myHeaders = new Headers();
+    myHeaders.append("X-AUTH-TOKEN", getToken());
+   
+    let requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    fetch(apiUrl+"account/me", requestOptions)
+    .then(response =>{
+        if(response.ok){
+            return response.json();
+        }
+        else{
+            console.log("Impossible derécupérer les informations utilisateur");
+        }
+    })
+    .then(result=>  {
+        return result;
+    })
+    .catch(error =>{
+        console.error("erreur lors de la récupération de données utilisateur", error);
+    })
 }
+

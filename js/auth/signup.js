@@ -113,7 +113,7 @@ function InscrireUtilisateur(){
     redirect: 'follow'
     };
 
-    fetch(apiurl+"registration", requestOptions)
+    fetch(apiUrl+"registration", requestOptions)
     .then(response => {
         if(response.ok){
             return response.json();

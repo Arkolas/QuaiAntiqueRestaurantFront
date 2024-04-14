@@ -4,7 +4,7 @@ const galerieImage = document.getElementById("allImages");
 //Récupérer les informations des images
 
 let titre= 'img src x';
-let imgSource ="../pages/images/reserv.jpf"
+let imgSource ="../pages/images/reserv.jpg"
 let monImage = getImage(titre, imgSource);
 
 
