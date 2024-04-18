@@ -22,10 +22,11 @@ jobs:
         server: ftp-pilecstudi.alwaysdata.net
         username: pilecstudi 
         password: ${{ secrets.ftp_password }}
-        server-dir: /www/
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/bootstrap/scss/**
           **/node_modules/bootstrap/js/**
           **/node_modules/bootstrap-icons/icons/**
+
+        server-dir: /www/
