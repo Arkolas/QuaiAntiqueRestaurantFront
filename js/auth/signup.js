@@ -5,7 +5,7 @@ const inputPassword = document.getElementById("PasswordInput");
 const inputValidationPassword = document.getElementById("ValidatePasswordInput");
 const btnValidation = document.getElementById("btn-validation-inscription");
 const formInscription = document.getElementById("formulaireInscription");
-const apiUrl = "https://127.0.0.1:8000/api/";
+
 
 inputNom.addEventListener("keyup", validateForm);
 inputPrenom.addEventListener("keyup", validateForm);
@@ -127,5 +127,5 @@ function InscrireUtilisateur(){
             document.location.href="/signin";
         })
         
-    .catch(error => console.log('error',error));
+    .catch(error => console.log('error', error));
 }
